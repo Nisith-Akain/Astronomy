@@ -1,0 +1,115 @@
+/* FE-04: outro + credits. The panel is always fully opaque (readable without
+   JS, and for contrast audits); activation only adds a small settle-in
+   movement, which is disabled under reduced motion. */
+#outro {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6vh 1.25rem;
+}
+
+#outro .outro-panel {
+  max-width: 40rem;
+  padding: 1.5rem 1.75rem;
+  border-radius: 1rem;
+  background: rgba(0, 0, 0, 0.82);
+  box-shadow: 0 0 40px 28px rgba(0, 0, 0, 0.7);
+  transform: translateY(1rem);
+  transition: transform 0.8s ease;
+}
+
+#outro.is-active .outro-panel {
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #outro .outro-panel {
+    transition: none;
+    transform: none;
+  }
+}
+
+#outro h2 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  color: #ffffff;
+}
+
+#outro .outro-lede {
+  margin: 0 0 1.25rem;
+  line-height: 1.55;
+  color: #eef1ff;
+}
+
+#outro .author-card {
+  margin: 0 0 1.25rem;
+  padding: 0.9rem 1.1rem;
+  border: 1px solid rgba(169, 200, 255, 0.35);
+  border-radius: 0.75rem;
+  background: rgba(169, 200, 255, 0.06);
+}
+
+#outro .author-name {
+  margin: 0 0 0.35rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+#outro .author-links {
+  margin: 0 0 0.5rem;
+  font-size: 0.92rem;
+  color: #cdd6ef;
+}
+
+#outro .author-links span {
+  margin: 0 0.4em;
+  opacity: 0.6;
+}
+
+#outro .author-cta {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: #e2e6f2;
+}
+
+#outro h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #d8def0;
+}
+
+#outro .credits {
+  margin: 0 0 1.25rem;
+  padding: 0;
+  list-style: none;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: #e2e6f2;
+}
+
+#outro .credits li + li {
+  margin-top: 0.6rem;
+}
+
+#outro .credit-line {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+#outro a {
+  color: #a9c8ff;
+}
+
+#outro a:focus-visible {
+  outline: 2px solid #9cc4ff;
+  outline-offset: 2px;
+}
+
+#outro .back-to-top {
+  display: inline-block;
+  font-size: 0.95rem;
+}

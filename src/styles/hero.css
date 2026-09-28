@@ -1,0 +1,57 @@
+/* FE-02: hero title overlay. The galaxy is framed in the lower part of the
+   viewport (see heroCameraView), the text sits above it on a soft scrim so it
+   keeps WCAG AA contrast over the animation. */
+#hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 11vh 1.25rem 0;
+  text-align: center;
+}
+
+#hero .hero-overlay {
+  position: relative;
+  max-width: 44rem;
+  padding: 1.25rem 1.75rem 1.5rem;
+  border-radius: 2rem;
+  /* Uniform scrim under every glyph, feathered edge via the shadow. */
+  background: rgba(0, 0, 0, 0.82);
+  box-shadow: 0 0 48px 36px rgba(0, 0, 0, 0.82);
+}
+
+#hero h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2.1rem, 5.5vw, 4.25rem);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.9), 0 2px 18px rgba(0, 0, 0, 0.85);
+}
+
+#hero .hero-subtitle {
+  margin: 0 auto;
+  max-width: 36rem;
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
+  line-height: 1.5;
+  color: #eef1ff;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.95), 0 1px 10px rgba(0, 0, 0, 0.9);
+}
+
+#hero .hero-scroll-cue {
+  position: absolute;
+  left: 50%;
+  bottom: 4vh;
+  transform: translateX(-50%);
+  margin: 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.88);
+  color: #f2f4fb;
+  white-space: nowrap;
+}

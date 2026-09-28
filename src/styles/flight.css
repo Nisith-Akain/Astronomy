@@ -1,0 +1,11 @@
+/* FE-04: black frame used for reduced-motion cuts between camera shots.
+   Sits directly after #stage (same z-index, later in the DOM, so above the
+   canvas) and below #content (z-index 1), so the page text never fades. */
+.flight-fade {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: #000;
+  opacity: 0;
+  pointer-events: none;
+}

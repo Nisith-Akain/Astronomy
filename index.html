@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="An interactive 3D journey from a spiral galaxy to our solar system." />
+    <title>Astronomy 3D</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#000000" />
+    <!-- FE-05: critical loading-screen styles, inline so the first paint is the
+         loading screen, not unstyled content (full rules in src/styles/loading.css). -->
+    <style>
+      html, body { margin: 0; background: #000; color: #f2f4fb; }
+      .loading { position: fixed; inset: 0; z-index: 10; display: flex; align-items: center;
+        justify-content: center; background: #000; font-family: system-ui, sans-serif; }
+      .loading[hidden] { display: none; }
+    </style>
+    <noscript><style>#loading { display: none; }</style></noscript>
+  </head>
+  <body>
+    <canvas id="stage" aria-hidden="true"></canvas>
+    <div id="loading" class="loading">
+      <div class="loading-panel">
+        <p class="loading-title" id="loading-title">Loading the cosmos</p>
+        <div class="loading-bar" role="progressbar" aria-labelledby="loading-title" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <span class="loading-bar-fill"></span>
+        </div>
+        <p class="loading-detail">0%</p>
+      </div>
+    </div>
+    <noscript>
+      <p class="noscript-note">The 3D journey needs JavaScript and WebGL. The text below still tells the story.</p>
+    </noscript>
+    <main id="content">
+      <section data-section="hero" id="hero" aria-labelledby="hero-title">
+        <div class="hero-overlay">
+          <h1 id="hero-title">Journey to the Solar System</h1>
+          <p class="hero-subtitle">
+            Fly from a spiral galaxy of a hundred billion suns to the eight worlds orbiting our own.
+          </p>
+        </div>
+        <p class="hero-scroll-cue">Scroll to begin</p>
+      </section>
+      <section data-section="solar-system" id="solar-system"></section>
+      <section data-section="probe" id="probe" aria-labelledby="probe-title">
+        <div class="probe-stage">
+          <h2 id="probe-title" class="visually-hidden">A probe beyond the planets</h2>
+          <div class="probe-caption" data-show="0.04 0.32">
+            <h3>Beyond the planets</h3>
+            <p>
+              Past Neptune the Sun is just a bright star. At 30 AU its light is about 900 times
+              fainter than at Earth.
+            </p>
+          </div>
+          <div class="probe-caption" data-show="0.36 0.64">
+            <h3>A thin line home</h3>
+            <p>
+              The high-gain dish is the probe's only link to Earth. From the edge of the Solar
+              System a radio signal takes nearly a day to arrive.
+            </p>
+          </div>
+          <div class="probe-caption" data-show="0.68 0.96">
+            <h3>Into interstellar space</h3>
+            <p>
+              Voyager 1, launched in 1977, crossed the heliopause in 2012, the first spacecraft
+              to leave the Sun's bubble of solar wind.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section data-section="outro" id="outro" aria-labelledby="outro-title">
+        <div class="outro-panel">
+          <h2 id="outro-title">Still travelling</h2>
+          <p class="outro-lede">
+            Every star behind this page is a sun of its own. Thanks for flying along.
+          </p>
+          <div class="author-card">
+            <p class="author-name">Built by Nisith Akain</p>
+            <p class="author-links">
+              <a href="https://github.com/Nisith-Akain" target="_blank" rel="noopener">github.com/Nisith-Akain</a>
+              <span aria-hidden="true">&middot;</span>
+              <a href="mailto:h.a.dnisith@gmail.com">h.a.dnisith@gmail.com</a>
+            </p>
+            <p class="author-cta">
+              Need a website designed for you? I'd love to help &mdash; get in touch.
+            </p>
+          </div>
+          <h3>Credits</h3>
+          <ul class="credits">
+            <li>
+              <p class="credit-line" id="texture-credit">Planet textures: <a href="https://www.solarsystemscope.com/textures/">Solar System Scope</a> (solarsystemscope.com), <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
+              Sun, planet and Saturn ring maps by INOVE / Solar System Scope, based on NASA
+              mission imagery and elevation data. Changes: files renamed; the Sun and Mercury
+              maps re-encoded as progressive JPEG to reduce size.
+            </li>
+            <li>
+              Orbital elements: E. M. Standish, JPL Solar System Dynamics,
+              <a href="https://ssd.jpl.nasa.gov/planets/approx_pos.html">Keplerian Elements for Approximate Positions of the Major Planets</a>.
+              Physical data:
+              <a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/">NASA GSFC Planetary Fact Sheets</a>.
+            </li>
+            <li>Space probe: original model made in Blender for this site.</li>
+            <li>Rendered with <a href="https://threejs.org/">three.js</a>.</li>
+          </ul>
+          <a class="back-to-top" href="#hero">Back to the galaxy</a>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+/* FE-04: probe section. The section is tall (the camera flies alongside the
+   probe while it scrolls); captions sit in a sticky full-viewport stage and
+   fade by scroll progress (opacity set from probe.ts). */
+#probe {
+  position: relative;
+  min-height: 300vh;
+}
+
+#probe .probe-stage {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 1.25rem 9vh;
+  pointer-events: none;
+}
+
+#probe .probe-caption {
+  position: absolute;
+  left: max(1.25rem, 6vw);
+  bottom: 9vh;
+  max-width: 26rem;
+  margin: 0;
+  padding: 1rem 1.25rem;
+  border-radius: 0.75rem;
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 32px 20px rgba(0, 0, 0, 0.55);
+  /* Faded with opacity only, so screen readers still get every caption. */
+  opacity: 0;
+}
+
+#probe .probe-caption h3 {
+  margin: 0 0 0.4rem;
+  font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+  color: #ffffff;
+}
+
+#probe .probe-caption p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #e8ecf8;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}

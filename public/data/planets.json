@@ -1,0 +1,193 @@
+{
+  "schemaVersion": 1,
+  "epoch": "J2000",
+  "source": "Orbital elements: E. M. Standish, JPL Solar System Dynamics, \"Keplerian Elements for Approximate Positions of the Major Planets\", Table 1 (1800 AD - 2050 AD), https://ssd.jpl.nasa.gov/planets/approx_pos.html (data file https://ssd.jpl.nasa.gov/txt/p_elem_t1.txt); Earth uses the EM Bary row. Physical data: NASA GSFC Planetary Fact Sheets, https://nssdc.gsfc.nasa.gov/planetary/factsheet/ and https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html",
+  "sun": {
+    "id": "sun",
+    "name": "Sun",
+    "radiusKm": 695700,
+    "rotationPeriodHours": 609.12,
+    "color": "#ffd27f",
+    "texture": "textures/planets/sun.jpg",
+    "facts": [
+      "Holds about 99.86% of the Solar System's mass.",
+      "Its surface is about 5,500 degrees C; the core reaches about 15 million degrees C.",
+      "Sunlight takes about 8 minutes 20 seconds to reach Earth."
+    ]
+  },
+  "planets": [
+    {
+      "id": "mercury",
+      "name": "Mercury",
+      "radiusKm": 2439.7,
+      "axialTiltDeg": 0.034,
+      "rotationPeriodHours": 1407.6,
+      "orbitalPeriodDays": 88.0,
+      "color": "#9e9a95",
+      "texture": "textures/planets/mercury.jpg",
+      "facts": [
+        "The smallest planet and the closest to the Sun.",
+        "One solar day lasts about 176 Earth days, twice its year.",
+        "Surface temperatures swing from about -180 to 430 degrees C."
+      ],
+      "elements": {
+        "a": 0.38709927, "e": 0.20563593, "I": 7.00497902,
+        "L": 252.25032350, "varpi": 77.45779628, "Omega": 48.33076593,
+        "aDot": 0.00000037, "eDot": 0.00001906, "IDot": -0.00594749,
+        "LDot": 149472.67411175, "varpiDot": 0.16047689, "OmegaDot": -0.12534081
+      }
+    },
+    {
+      "id": "venus",
+      "name": "Venus",
+      "radiusKm": 6051.8,
+      "axialTiltDeg": 177.4,
+      "rotationPeriodHours": -5832.6,
+      "orbitalPeriodDays": 224.7,
+      "color": "#e3c285",
+      "texture": "textures/planets/venus.jpg",
+      "facts": [
+        "The hottest planet, at about 465 degrees C, due to a runaway greenhouse effect.",
+        "Rotates backwards (retrograde), and a sidereal day is longer than its year.",
+        "Surface pressure is about 92 times Earth's."
+      ],
+      "elements": {
+        "a": 0.72333566, "e": 0.00677672, "I": 3.39467605,
+        "L": 181.97909950, "varpi": 131.60246718, "Omega": 76.67984255,
+        "aDot": 0.00000390, "eDot": -0.00004107, "IDot": -0.00078890,
+        "LDot": 58517.81538729, "varpiDot": 0.00268329, "OmegaDot": -0.27769418
+      }
+    },
+    {
+      "id": "earth",
+      "name": "Earth",
+      "radiusKm": 6371.0,
+      "axialTiltDeg": 23.44,
+      "rotationPeriodHours": 23.9345,
+      "orbitalPeriodDays": 365.256,
+      "color": "#2f6fb5",
+      "texture": "textures/planets/earth.jpg",
+      "facts": [
+        "The only world known to host life.",
+        "About 71% of the surface is covered by oceans.",
+        "Its axial tilt of 23.4 degrees causes the seasons."
+      ],
+      "elements": {
+        "a": 1.00000261, "e": 0.01671123, "I": -0.00001531,
+        "L": 100.46457166, "varpi": 102.93768193, "Omega": 0.0,
+        "aDot": 0.00000562, "eDot": -0.00004392, "IDot": -0.01294668,
+        "LDot": 35999.37244981, "varpiDot": 0.32327364, "OmegaDot": 0.0
+      }
+    },
+    {
+      "id": "mars",
+      "name": "Mars",
+      "radiusKm": 3389.5,
+      "axialTiltDeg": 25.19,
+      "rotationPeriodHours": 24.6229,
+      "orbitalPeriodDays": 687.0,
+      "color": "#c1440e",
+      "texture": "textures/planets/mars.jpg",
+      "facts": [
+        "Home to Olympus Mons, the tallest volcano in the Solar System.",
+        "Its red colour comes from iron oxide dust.",
+        "Has two small moons, Phobos and Deimos."
+      ],
+      "elements": {
+        "a": 1.52371034, "e": 0.09339410, "I": 1.84969142,
+        "L": -4.55343205, "varpi": -23.94362959, "Omega": 49.55953891,
+        "aDot": 0.00001847, "eDot": 0.00007882, "IDot": -0.00813131,
+        "LDot": 19140.30268499, "varpiDot": 0.44441088, "OmegaDot": -0.29257343
+      }
+    },
+    {
+      "id": "jupiter",
+      "name": "Jupiter",
+      "radiusKm": 69911,
+      "axialTiltDeg": 3.13,
+      "rotationPeriodHours": 9.925,
+      "orbitalPeriodDays": 4331,
+      "color": "#c9a27e",
+      "texture": "textures/planets/jupiter.jpg",
+      "facts": [
+        "The largest planet: more than twice the mass of all other planets combined.",
+        "The Great Red Spot is a storm wider than Earth.",
+        "Has the shortest day of any planet, just under 10 hours."
+      ],
+      "elements": {
+        "a": 5.20288700, "e": 0.04838624, "I": 1.30439695,
+        "L": 34.39644051, "varpi": 14.72847983, "Omega": 100.47390909,
+        "aDot": -0.00011607, "eDot": -0.00013253, "IDot": -0.00183714,
+        "LDot": 3034.74612775, "varpiDot": 0.21252668, "OmegaDot": 0.20469106
+      }
+    },
+    {
+      "id": "saturn",
+      "name": "Saturn",
+      "radiusKm": 58232,
+      "axialTiltDeg": 26.73,
+      "rotationPeriodHours": 10.656,
+      "orbitalPeriodDays": 10747,
+      "color": "#e3d2a0",
+      "texture": "textures/planets/saturn.jpg",
+      "ring": {
+        "innerKm": 74658,
+        "outerKm": 136775,
+        "texture": "textures/planets/saturn_ring.png"
+      },
+      "facts": [
+        "Its main rings span about 270,000 km but are mostly only tens of metres thick.",
+        "Less dense than water on average.",
+        "Winds near the equator reach about 1,800 km/h."
+      ],
+      "elements": {
+        "a": 9.53667594, "e": 0.05386179, "I": 2.48599187,
+        "L": 49.95424423, "varpi": 92.59887831, "Omega": 113.66242448,
+        "aDot": -0.00125060, "eDot": -0.00050991, "IDot": 0.00193609,
+        "LDot": 1222.49362201, "varpiDot": -0.41897216, "OmegaDot": -0.28867794
+      }
+    },
+    {
+      "id": "uranus",
+      "name": "Uranus",
+      "radiusKm": 25362,
+      "axialTiltDeg": 97.77,
+      "rotationPeriodHours": -17.24,
+      "orbitalPeriodDays": 30589,
+      "color": "#9fd7e0",
+      "texture": "textures/planets/uranus.jpg",
+      "facts": [
+        "Spins on its side, with an axial tilt of about 98 degrees.",
+        "An ice giant whose methane atmosphere gives it a blue-green colour.",
+        "Each pole gets about 42 years of continuous sunlight, then 42 of darkness."
+      ],
+      "elements": {
+        "a": 19.18916464, "e": 0.04725744, "I": 0.77263783,
+        "L": 313.23810451, "varpi": 170.95427630, "Omega": 74.01692503,
+        "aDot": -0.00196176, "eDot": -0.00004397, "IDot": -0.00242939,
+        "LDot": 428.48202785, "varpiDot": 0.40805281, "OmegaDot": 0.04240589
+      }
+    },
+    {
+      "id": "neptune",
+      "name": "Neptune",
+      "radiusKm": 24622,
+      "axialTiltDeg": 28.32,
+      "rotationPeriodHours": 16.11,
+      "orbitalPeriodDays": 59800,
+      "color": "#3e66d1",
+      "texture": "textures/planets/neptune.jpg",
+      "facts": [
+        "The most distant planet, about 30 times farther from the Sun than Earth.",
+        "Has the fastest winds measured in the Solar System, over 2,000 km/h.",
+        "Its existence was predicted mathematically before it was observed in 1846."
+      ],
+      "elements": {
+        "a": 30.06992276, "e": 0.00859048, "I": 1.77004347,
+        "L": -55.12002969, "varpi": 44.96476227, "Omega": 131.78422574,
+        "aDot": 0.00026291, "eDot": 0.00005105, "IDot": 0.00035372,
+        "LDot": 218.45945325, "varpiDot": -0.32241464, "OmegaDot": -0.00508664
+      }
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+/* FE-05: phone / touch tuning that spans several sections. Section-specific
+   rules stay in each section's own stylesheet. */
+
+/* Touch: vertical swipes scroll the page, horizontal swipes orbit the solar
+   system view (FE-03 drag), taps pick planets. */
+section[data-section='solar-system'] {
+  touch-action: pan-y;
+}
+
+/* Phones: FE-03's info panel (bottom: 150px) overlapped the wrapped time
+   controls, which are ~3 rows tall at 390 px. Tighten the controls and dock the
+   info panel under the body list instead. */
+@media (max-width: 768px) {
+  section[data-section='solar-system'] .ss-controls {
+    gap: 8px 10px;
+    padding: 8px 10px;
+    bottom: 12px;
+  }
+  section[data-section='solar-system'] .ss-speed input {
+    width: 112px;
+  }
+  section[data-section='solar-system'] .ss-speed-out {
+    min-width: 72px;
+  }
+  section[data-section='solar-system'] .ss-date {
+    min-width: 0;
+  }
+  section[data-section='solar-system'] .ss-info {
+    top: 152px;
+    bottom: auto;
+    max-height: calc(100% - 152px - 200px);
+    overflow-y: auto;
+  }
+}
+
+.noscript-note {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  padding: 0.75rem 1.25rem;
+  background: #1a1d2b;
+  color: #f2f4fb;
+  text-align: center;
+}

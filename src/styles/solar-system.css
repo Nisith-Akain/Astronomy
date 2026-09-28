@@ -1,0 +1,219 @@
+/* FE-03: solar-system section overlay. Scoped under .ss-ui / #solar-system. */
+section[data-section='solar-system'] {
+  position: relative;
+}
+
+.ss-ui {
+  position: absolute;
+  inset: 0;
+  pointer-events: none; /* empty areas fall through to the section for picking */
+  font-size: 14px;
+  line-height: 1.4;
+  color: #f2f2f2;
+}
+
+.ss-ui.is-inactive .ss-label {
+  display: none;
+}
+
+.ss-title,
+.ss-hint {
+  position: absolute;
+  left: 16px;
+  margin: 0;
+  text-shadow: 0 1px 3px #000;
+}
+.ss-title {
+  top: 16px;
+  font-size: 22px;
+  font-weight: 600;
+}
+.ss-hint {
+  top: 50px;
+  max-width: 340px;
+  color: #d0d4dc;
+  font-size: 13px;
+}
+
+.ss-block {
+  pointer-events: auto;
+  background: rgba(8, 10, 18, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+}
+
+.ss-ui button,
+.ss-ui input,
+.ss-ui output {
+  font: inherit;
+  color: inherit;
+}
+
+.ss-ui button {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+.ss-ui button:hover,
+.ss-ui button.is-hovered {
+  background: rgba(255, 255, 255, 0.18);
+}
+.ss-ui button[aria-pressed='true'].ss-scale,
+.ss-ui button[aria-current='true'] {
+  background: rgba(120, 170, 255, 0.3);
+  border-color: rgba(150, 190, 255, 0.7);
+}
+.ss-ui :focus-visible {
+  outline: 2px solid #9cc4ff;
+  outline-offset: 2px;
+}
+
+.ss-list {
+  position: absolute;
+  left: 16px;
+  top: 120px;
+  padding: 8px;
+}
+.ss-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.ss-list button {
+  width: 100%;
+  text-align: left;
+  min-width: 96px;
+}
+
+.ss-controls {
+  position: absolute;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  padding: 10px 12px;
+  max-width: calc(100% - 32px);
+}
+.ss-speed {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.ss-speed input {
+  width: 160px;
+}
+.ss-speed-out {
+  min-width: 96px;
+  font-variant-numeric: tabular-nums;
+}
+.ss-date {
+  display: flex;
+  flex-direction: column;
+  min-width: 170px;
+}
+.ss-date-label {
+  font-size: 11px;
+  color: #b8bec9;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.ss-date-out {
+  font-variant-numeric: tabular-nums;
+}
+.ss-date-warn {
+  font-size: 11px;
+  color: #ffcf7a;
+}
+
+.ss-info {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  width: min(320px, calc(100% - 32px));
+  padding: 14px 16px;
+}
+.ss-info[hidden] {
+  display: none;
+}
+.ss-info h3 {
+  margin: 0 0 4px;
+  font-size: 20px;
+}
+.ss-info h3:focus {
+  outline: none;
+}
+.ss-info-detail {
+  margin: 0 0 8px;
+  color: #c7ccd6;
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+}
+.ss-info-facts {
+  margin: 0;
+  padding-left: 18px;
+}
+.ss-info-facts li + li {
+  margin-top: 4px;
+}
+.ss-close {
+  float: right;
+  margin-left: 8px;
+}
+
+.ss-status {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  margin: 0;
+  color: #ffcf7a;
+}
+.ss-status:empty {
+  display: none;
+}
+
+.ss-label {
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgba(8, 10, 18, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  white-space: nowrap;
+  font-size: 13px;
+  z-index: 2;
+}
+.ss-label[hidden] {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .ss-hint {
+    display: none;
+  }
+  .ss-list {
+    top: 56px;
+  }
+  .ss-list ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: calc(100vw - 48px);
+  }
+  .ss-list button {
+    min-width: 0;
+  }
+  .ss-info {
+    top: auto;
+    bottom: 150px;
+  }
+}
