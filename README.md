@@ -1,6 +1,6 @@
 # Astronomy 3D site
 
-**Live: https://nisith-akain.github.io/astronomy-site/**
+**Live: https://nisith-akain.github.io/Astronomy/ 
 
 Scroll-driven 3D astronomy page: spiral galaxy hero, a real-orbit solar
 system, a probe fly-by and an outro. Vite + TypeScript (strict) + three.js.
